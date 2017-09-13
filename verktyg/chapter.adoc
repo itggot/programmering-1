@@ -1,0 +1,174 @@
+= Verktyg
+
+== Variabler
+
+=== Tilldelning
+
+För att kunna använda värden (t.ex tal) i program måste man först lagra dem i en variabel.
+Att lagra ett värde i en variabel gör man med hjälp av tilldelning.
+
+[source, ruby, numbered]
+----
+name = "Finn the Human"
+health = 100
+----
+== Uppdelning av programflödet
+
+Villkor delar upp programflödet i två möjliga vägar.
+
+Ett villkor har **en** ingång, och **två** utgångar - den ena utgången är märkt `sann` eller `true` och den andra är märkt `falskt` eller `false`.
+
+Villkor ritas som hexagoner. I hexagonen står en `jämförelseoperation`. 
+
+En jämförelseoperation består av tre delar: en `operand`, en `jämförelseoperator` och sen en till `operand`.
+
+.Två villkor
+image::images/verktyg/villkor.png[två villkor]
+
+.Alla tillåtna jämförelseoperationer
+[source, ruby, numbered]
+----
+number1 = 10
+number2 = 15
+
+number1 > number2 #<1>
+number1 < number2 #<2>
+number1 == number2 #<3>
+number1 != number2 #<4>
+number1 >= number2 #<5>
+number1 <= number2 #<6>
+----
+<1> => `false` - Utläses som "number1 är **större än** number2". 
+<2> => `true`{nbsp}{nbsp}{nbsp}- Utläses som "number1 är **mindre än** number2".
+<3> => `false` - Utläses som "number1 är **samma som** number2".
+<4> => `true`{nbsp}{nbsp}{nbsp}- Utläses som "number1 är **_inte_ samma som** number2".
+<5> => `false` - Utläses som "number1 är **större än _eller_ samma som** number2".
+<6> => `true`{nbsp}{nbsp}{nbsp}- Utläses som "number1 är **mindre än _eller_ samma som** number2".
+
+
+Beroende på om jämförelseoperationen utvärderas till `sant` eller `falskt` fortsätter programflödet genom respektive utgång.
+
+
+=== If
+
+Om du vill att ditt program ska göra en sak **enbart om ett villkor är sant**, kan du använda `if`.
+If-verktyget använder ett villkor, och om villkoret utvärderas till `sant` kommer något ske.
+Om villkoret **inte** utvärderas till sant kommer programflödet fortsätta efter villkoret, som om ingenting hänt.
+
+.If-verktyget i ett flödesschema
+image::images/verktyg/if.png[]
+
+.If-verktyget som ruby-kod
+[source, ruby, numbered, highlight=2-4]
+----
+...
+if new_score > current_highscore
+    current_highscore = new_score #<1>
+end
+#<2>
+...
+----
+<1> Raderna mellan jämförelseoperationen och `end` motsvarar `true`-utgången i flödesschemat
+<2> Efter `end` fortsätter programflödet. Om villkoret är falskt hoppar programflödet direkt hit istället för att gå in i `if-satsen`.
+
+I exemplet ovan kommer `current_highscore` tilldelas `new_score` **enbart** om `new_score` är större än `current_highscore`
+
+
+[WARNING]
+====
+If-verktyget fungerar **enbart** på `true`-utången.
+====
+
+.Felaktigt if-verktyg (operationen utförs vid `false`).
+image::images/verktyg/bad_if.png[]
+
+.Ett felaktigt if-verktyg i ruby.
+[source, ruby, numbered, highlight=2-5]
+----
+...
+if new_score <= current_highscore
+    #do nothing
+end
+current_highscore = new_score #<1>
+...
+----
+<1> Eftersom programflödet kommer hit **oavsett** om villkoret utvärderats till `true` eller `false` kommer denna rad **alltid** att köras.
+
+=== If-else
+
+Om du vill att ditt program ska göra en sak **om ett villkor är sant**, **_och en annan sak om villkoret är falskt_** kan du använda `if-else`.
+
+.If-else-verktyget i ett flödesschema
+image::images/verktyg/if_else.png[]
+
+If-else börjar som en `if`, men om villkoret **inte** utvärderas till sant kommer programflödet hoppa till koden som ligger i `else-blocket`.
+
+.If-else-verktyget som ruby-kod
+[source, ruby, numbered, highlight=2-6]
+----
+...
+if number1 > number2 
+    largest = number1 #<1>
+else
+    largest = number2 #<2>
+end
+... <3>
+----
+<1> Koden mellan villkoret och `else` (`if`-blocket) körs **enbart** om villkoret är sant.
+<2> Koden mellan `else` och `end` (`else`-blocket) körs **enbart** om villkoret är falskt.
+<3> Oavsett om `if` eller `else`-blocket körts kommer programflödet fortsätta efter `end`.
+
+=== If-else-if-else
+
+Om ditt program har _fler än två_ olika saker det ska göra baserat på **olika** villkor kan du använda if-else-if-else.
+
+.If-else-if-else-verktyget i ett flödesschema
+image::images/verktyg/if_else_if_else.png[]
+
+If-else-if-else börjar som en `if`, men om villkoret **inte** utvärderas till sant kommer programflödet hoppa till och utvärdera **nästa** `elsif-block`.
+
+[source, ruby, numbered, highlight=2-10 ]
+----
+...
+if health < 10 #<1>
+    status = "very badly hurt" #<2>
+elsif health < 50 #<3>
+    status = "badly hurt" #<4>
+elsif health < 75 #<5>
+    status = "lightly hurt" #<6>
+else #<7>
+    status = "feeling fine" #<8>
+end
+... #<9>
+----
+<1> Om villkoret är falskt fortsätter programflödet direkt till nästa `elsif`.
+<2> Detta kodblock körs **enbart** om `health` är mindre än 10. Därefter hoppar programflödet **direkt** till raden efter `end`.
+<3> Om villkoret är falskt fortsätter programflödet direkt till nästa `elsif`.
+<4> Detta kodblock körs **enbart** om `health` är mindre än 50. Därefter hoppar programflödet **direkt** till raden efter `end`.
+<5> Om villkoret är falskt fortsätter programflödet direkt till `else`.
+<6> Detta kodblock körs **enbart** om `health` är mindre än 75. Därefter hoppar programflödet **direkt** till raden efter `end`.
+<7> Om **inget** av `elsif-satserna` utvärderats till true kommer programflödet hoppa till `else`.
+<8> Detta kodblock körs **enbart** om **inget** av de tidigare villkoren utvärderats till sant.
+<9> Oavsett vilket av kodblocken som körts kommer programflödet fortsätta här.
+ 
+=== Nästade eller kedjade if
+
+Om ditt program har **flera olika villkor** som måste vara uppfyllda för att något ska hända kan du använda verktyget `kedjad if`.
+
+.Kedjade-if i flödesschema
+image::images/verktyg/nested_if.png[]
+
+[source, ruby, numbered, highlight=2-10]
+----
+...
+if test_result > 95
+    if teacher_bribe > 2000
+        if teacher_mood == "great"
+            grade = "A"
+        end
+    end
+else
+    grade = "F"
+end
+...
+----
