@@ -7,11 +7,14 @@
 För att kunna använda värden (t.ex tal) i program måste man först lagra dem i en variabel.
 Att lagra ett värde i en variabel gör man med hjälp av tilldelning.
 
+En tilldelning består av tre komponenter: en `variabel`, ett `tilldelningstecken` och ett `värde`.
+
 [source, ruby, numbered]
-----
-name = "Finn the Human"
-health = 100
-----
+include::{sourcedir}/verktyg/tilldelning.rb[]
+
+<1> Utläses som "hitpoints _tilldelas_ 100".
+<2> Utläses som "name _tilldelas_ Jake the Human".
+
 == Uppdelning av programflödet
 
 Villkor delar upp programflödet i två möjliga vägar.

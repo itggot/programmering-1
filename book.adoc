@@ -3,8 +3,13 @@
 :toc: left
 :toclevels: 3
 :source-highlighter: pygments
+:includedir: includes
+:sourcedir: ../source
+
 
 
 = Programmering 1
 
 include::verktyg/chapter.adoc[leveloffset=+1]
+
+include::exercises/chapter.adoc[leveloffset=+1]
