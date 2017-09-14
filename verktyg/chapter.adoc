@@ -161,14 +161,18 @@ Om ditt program har **flera olika villkor** som måste vara uppfyllda för att n
 .Kedjade-if i flödesschema
 image::images/verktyg/nested_if.png[]
 
-[source, ruby, numbered, highlight=2-10]
+[source, ruby, numbered, highlight=2-14]
 ----
 ...
 if test_result > 95
     if teacher_bribe > 2000
         if teacher_mood == "great"
             grade = "A"
+        else
+            grade = "F"
         end
+    else
+        grade = "F"
     end
 else
     grade = "F"
