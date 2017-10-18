@@ -13,7 +13,7 @@ En tilldelning består av tre komponenter: en `variabel`, ett `tilldelningstecke
 include::{sourcedir}/verktyg/tilldelning.rb[]
 
 <1> Utläses som "hitpoints _tilldelas_ 100".
-<2> Utläses som "name _tilldelas_ Jake the Human".
+<2> Utläses som "name _tilldelas_ Finn the Human".
 
 === Inkrementering
 
