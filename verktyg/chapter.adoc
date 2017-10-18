@@ -15,6 +15,49 @@ include::{sourcedir}/verktyg/tilldelning.rb[]
 <1> Utläses som "hitpoints _tilldelas_ 100".
 <2> Utläses som "name _tilldelas_ Jake the Human".
 
+=== Inkrementering
+
+Att öka värdet på en variabel kallas _inkrementering_, eller att _inkrementera_.
+
+Oftast används inkrementeringsverktyget i samband med loopar.
+
+.Två sätt att rita inkrementering i flödesschema
+image::images/verktyg/incrementation.png[två villkor]
+
+.Inkrementering som ruby-kod
+[source, ruby, numbered, highlight=4]
+----
+...
+score = 5 #<1>
+...
+score = score + 1
+...
+----
+<1> För att kunna inkrementera en variabel måste den först ha tilldelats ett värde
+<2> Inkrementering. Operationen till höger om tilldelningstecknet utförs först. Resultatet tilldelas variabeln till vänster om tilldelningstecknet.
+
+=== Dekrementering
+
+Att minska värdet på en variabel kallas _dekrementering_, eller att _dekrementera_.
+
+Oftast används dekrementeringsverktyget i samband med loopar.
+
+.Två sätt att rita dekrementering i flödesschema
+image::images/verktyg/decrementation.png[två villkor]
+
+.Dekrementering som ruby-kod
+[source, ruby, numbered, highlight=4]
+----
+...
+score = 5 #<1>
+...
+score = score - 1
+...
+----
+<1> För att kunna dekrementera en variabel måste den först ha tilldelats ett värde
+<2> Dekrementering. Operationen till höger om tilldelningstecknet utförs först. Resultatet tilldelas variabeln till vänster om tilldelningstecknet.
+
+
 == Uppdelning av programflödet
 
 Villkor delar upp programflödet i två möjliga vägar.
@@ -25,7 +68,7 @@ Villkor ritas som hexagoner. I hexagonen står en `jämförelseoperation`.
 
 En jämförelseoperation består av tre delar: en `operand`, en `jämförelseoperator` och sen en till `operand`.
 
-.Två villkor
+.Två villkor i flödesschema
 image::images/verktyg/villkor.png[två villkor]
 
 .Alla tillåtna jämförelseoperationer
@@ -48,9 +91,7 @@ number1 <= number2 #<6>
 <5> => `false` - Utläses som "number1 är **större än _eller_ samma som** number2".
 <6> => `true`{nbsp}{nbsp}{nbsp}- Utläses som "number1 är **mindre än _eller_ samma som** number2".
 
-
 Beroende på om jämförelseoperationen utvärderas till `sant` eller `falskt` fortsätter programflödet genom respektive utgång.
-
 
 === If
 
@@ -80,7 +121,6 @@ I exemplet ovan kommer `current_highscore` tilldelas `new_score` **enbart** om `
 [WARNING]
 ====
 If-verktyget fungerar **enbart** på `true`-utången.
-====
 
 .Felaktigt if-verktyg (operationen utförs vid `false`).
 image::images/verktyg/bad_if.png[]
@@ -96,6 +136,7 @@ current_highscore = new_score #<1>
 ...
 ----
 <1> Eftersom programflödet kommer hit **oavsett** om villkoret utvärderats till `true` eller `false` kommer denna rad **alltid** att köras.
+====
 
 === If-else
 
@@ -161,6 +202,7 @@ Om ditt program har **flera olika villkor** som måste vara uppfyllda för att n
 .Kedjade-if i flödesschema
 image::images/verktyg/nested_if.png[]
 
+.Kedjade if som ruby-kod
 [source, ruby, numbered, highlight=2-14]
 ----
 ...
@@ -179,3 +221,104 @@ else
 end
 ...
 ----
+
+== Upprepning av programflödet
+
+Loopar leder programflödet tillbaks tills samma ställe om och om igen, tills ett villkor har blivit uppfyllt.
+
+Loopar återanvänder symbolen för villkor, men på strecket som leder till ingången ritar vi en liten cirkel där loopen återansluter till loop-villkoret.
+
+.Två loopar
+image::images/verktyg/loopar.png[två loopar]
+
+[WARNING]
+====
+Loop-utgången **måste** ske på `true`-utången.
+
+.Felaktigt loop-verktyg (loop sker vid `false`).
+image::images/verktyg/bad_loop.png[]
+====
+
+
+=== Inkrementerande loop
+
+En inkrementerande loop passar bra att använda om du i förväg vet (eller kan räkna ut) hur många gånger programflödet behöver upprepas, t.ex. om programmet alltid ska göra något 5 gånger, eller om vet att du ska göra något lika många gånger som du har tal i en lista.
+
+Inkrementerande loopar använder sig av en _räknar-variabel_. En räknar-variabel håller koll på hur många gånger loopen upprepats. Vanliga namn på räknar-variabler är `counter`, `iterations` eller `i`, men en räknar-variabel kan heta precis vad som helst.
+
+För att en räknande loop ska fungera behöver följande steg ske:
+
+1. Innan loopen påbörjas måste man _initiera_ räknar-variabeln, det vill säga, tilldela den ett värde. I de flesta fall initierar man räknar-variabeln med värdet 0 (eftersom det är så många gånger man upprepat programflödet innan man börjar loopa).
+
+2. Räknar-variabeln används sen inne i villkoret som avgör om programflödet ska upprepas eller ej.
+
+3. Inne i loopen måste räknar-variabeln _inkrementeras_, det vill säga ökas. Om man inte ökar räknar-variabeln kommer loopen fortsätta i all evighet, eftersom loop-villkoret aldrig blir falskt.
+
+.En inkrementerande loop i flödesschema
+image::images/verktyg/incrementing_loop.png[]
+
+.Inkrementerande loop som ruby-kod
+[source, ruby, numbered, highlight=2-6]
+----
+...
+number_of_turns = 0 #<1>
+while number_of_turns < game_turn_limit #<2>
+    ... #<3>
+    number_of_turns = number_of_turns   + 1 #<4>
+end 
+... #<5>
+----
+<1> Initierar räknar-variabeln.
+<2> Så länge räknar-variabeln är mindre än `number_of_iterations` kommer loopen upprepas
+<3> Koden som ska upprepas.
+<4> Inkrementera räknarvariabeln - om man missar detta steg får man en oändlig loop.
+<5> Här fortsätter programflödet när/om loop-villkoret är falskt.
+
+=== Dekrementerande loop
+
+En dekrementerande loop har i stort sett samma användningsområde som en inkrementerande loop, det vill säga, du vet (eller kan räkna ut) hur många gånger du behöver upprepa programflödet.
+
+Skillnaden är att räknar-variabeln räknar neråt, det vill säga dekrementerar.
+
+.Dekrementerande loop i flödesschema
+image::images/verktyg/decrementing_loop.png[]
+
+.Dekrementerande loop som ruby-kod
+[source, ruby, numbered, highlight="2, 4-7"]
+----
+...
+turns_left = 6 #<1>
+...
+while turns_left > 0 #<2>
+    ... #<3>
+    turns_left = turns_left -1 #<4>
+end 
+... #<5>
+----
+<1> Initierar räknar-variabeln.
+<2> Så länge `turns_left` är större än 0 kommer loopen upprepas.
+<3> Koden som ska upprepas.
+<4> Dekrementera räknarvariabeln - om man missar detta steg får man en oändlig loop.
+<5> Här fortsätter programflödet när/om loop-villkoret är falskt.
+
+=== Loop med brytvärde
+
+Om du inte i förväg vet (eller kan räkna ut) hur många gånger programflödet ska upprepas behöver du använda en loop med brytvärde.
+
+.Loop med brytvärde i flödesschema
+image::images/verktyg/loop_with_sentinel_value.png[]
+
+.Loop med brytvärde i som ruby-kod
+[source, ruby, numbered, highlight=2-5]
+----
+...
+while player_health > 0 #<1>
+    ... #<2>
+    ... #<3>
+end 
+... #<4>
+----
+<1> Så länge som `player_health` är större än 0 kommer loopen upprepas.
+<2> Koden som ska upprepas. 
+<3> Någonstans i loopen måste `player_health` kunna ändras - annars blir det en oändlig loop.
+<4> Här fortsätter programflödet när/om loop-villkoret är falskt.
