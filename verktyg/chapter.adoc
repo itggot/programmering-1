@@ -13,7 +13,7 @@ En tilldelning består av tre komponenter: en `variabel`, ett `tilldelningstecke
 include::{sourcedir}/verktyg/tilldelning.rb[]
 
 <1> Utläses som "hitpoints _tilldelas_ 100".
-<2> Utläses som "name _tilldelas_ Finn the Human".
+<2> Utläses som "name _tilldelas_ Finn   the Human".
 
 === Inkrementering
 
@@ -301,14 +301,14 @@ end
 <4> Dekrementera räknarvariabeln - om man missar detta steg får man en oändlig loop.
 <5> Här fortsätter programflödet när/om loop-villkoret är falskt.
 
-=== Loop med brytvärde
+=== Loop med okänt antal iterationer
 
 Om du inte i förväg vet (eller kan räkna ut) hur många gånger programflödet ska upprepas behöver du använda en loop med brytvärde.
 
-.Loop med brytvärde i flödesschema
+.Loop med okänt antal iterationer
 image::images/verktyg/loop_with_sentinel_value.png[]
 
-.Loop med brytvärde i som ruby-kod
+.Loop med okänt antal iterationer
 [source, ruby, numbered, highlight=2-5]
 ----
 ...
