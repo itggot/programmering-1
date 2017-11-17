@@ -440,3 +440,28 @@ end
 <2> Koden som ska upprepas. 
 <3> Någonstans i loopen måste `player_health` kunna ändras - annars blir det en oändlig loop.
 <4> Här fortsätter programflödet när/om loop-villkoret är falskt.
+
+== Funktionsanrop
+
+
+Ibland vill man i en del av en ny funktion använda samma funktionalitet som finns i en annan funktion.
+
+I stället för att rita samma flöde i det nya flödesschemat, eller skriva (eller kopiera in) samma kod i den nya funktionen, kan man istället anropa den funktion man behöver, inne i den nya funktionen.
+
+På så viss spar man tid och minskar risken för buggar (förutsatt att den funktion man anropar fungerar korrekt).
+
+.Funktionsanrop i flödesschema
+image::images/verktyg/function_call.png[]
+
+.Funktionsanrop i ruby-kod
+[source, ruby, numbered, highlight=4]
+----
+...
+def new_function(a_word)
+    ...
+    reversed_word = reverse(a_word) #<1>
+    ...
+end
+...
+----
+<1> Förutsatt att det faktiskt finns en funktion som heter `reverse` och som tar en sträng som indata.
