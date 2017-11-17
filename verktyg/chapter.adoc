@@ -13,11 +13,38 @@ En tilldelning består av tre komponenter: en `variabel`, ett `tilldelningstecke
 include::{sourcedir}/verktyg/tilldelning.rb[]
 
 <1> Utläses som "hitpoints _tilldelas_ 100".
-<2> Utläses som "name _tilldelas_ Finn   the Human".
+<2> Utläses som "name _tilldelas_ Finn the Human".
 
-=== Inkrementering
+== Datatyper
 
-Att öka värdet på en variabel kallas _inkrementering_, eller att _inkrementera_.
+Alla värden som lagras i en variabel är av en viss _datatyp_.
+
+Datorn måste veta vilken typ av data som är lagrad i en variabel, så den vet vad den kan göra med variabeln.
+
+Till exempel kan man addera dividera två tal med varandra, men det går inte att dividera ett ord.
+
+== Heltal (Integer)
+
+Integer är en datatyp som representerar heltal. I Ruby kan heltal ha vilket heltalsvärde som helst från och med negativ oändlighet till och med positiv oändlighet.
+
+I Ruby tilldelar man en variabel ett heltalsvärde genom att skriva heltalsvärdet till höger om tilldelningstecknet.
+
+.Tilldela en variabel en Integer
+[source, ruby, numbered, highlight='2-4']
+----
+...
+a_negative_number = -5 #<1>
+a_small_number = 0 #<2>
+a_large_number = 13 + 37 #<3>
+...
+----
+<1> `a_negative_number` tilldelas _minus_ 5 (heltal kan vara negative).
+<2> `a_small_number` tilldelas 0, som är ett heltal.
+<3> `a_large_number` tilldelas resultatet av operationen (i det här fallet 50, även det ett heltal)
+
+==== Inkrementering
+
+Att öka värdet på en variabel av datatypen `Integer` kallas _inkrementering_, eller att _inkrementera_.
 
 Oftast används inkrementeringsverktyget i samband med loopar.
 
@@ -38,7 +65,7 @@ score = score + 1
 
 === Dekrementering
 
-Att minska värdet på en variabel kallas _dekrementering_, eller att _dekrementera_.
+Att minska värdet på en variabel av datatypen `Integer` kallas _dekrementering_, eller att _dekrementera_.
 
 Oftast används dekrementeringsverktyget i samband med loopar.
 
@@ -57,6 +84,97 @@ score = score - 1
 <1> För att kunna dekrementera en variabel måste den först ha tilldelats ett värde
 <2> Dekrementering. Operationen till höger om tilldelningstecknet utförs först. Resultatet tilldelas variabeln till vänster om tilldelningstecknet.
 
+== Sträng (String)
+
+String är datatyp som representerar en ordnad sekvens av tecken (t.ex tecken, ord, meningar, eller hela böcker).
+
+För att skapa en sträng i Ruby behöver man omge värdet man ska tilldela variabeln med `"` (uttalas _dubbelfnutt_)
+
+.Tilldela en variabel en String
+[source, ruby, numbered, highlight='2-5']
+----
+...
+first_string  = "1337" #<1>
+second_string = "An escalator can never break: it can only become stairs" #<2>
+third_string  = " " #<3>
+fourth_string = "" #<4>
+...
+----
+<1> Det kan se ut som strängen innehåller ett tal, men den innehåller i själva verket 4 tecken (tecknet ett, tecknet tre, tecknet tre, tecknet sju).
+<2> Strängar kan innehålla alla möjliga tecken och vara hur långa som helst.
+<3> Den här strängen innehåller bara ett tecken; tecknet _mellanslag_
+<4> Den här strängen innehåller inga tecken alls; det är en _tom sträng_.
+
+=== Indexering
+
+Alla tecken i en sträng har en position, eller `index`. Det första tecknet har index 0, och det sista tecknets index är antalet tecken i strängen minus 1:
+
+image::images/verktyg/string_indices.png[]
+
+Strängen "kittens" har 7 tecken, och det största indexet är därmed 6.
+
+Man kan använda indexeringsverktyget för att ta reda på vilket tecken som finns på ett visst index i en sträng.
+
+.Indexeringsverktyget i ruby-kod
+[source, ruby, numbered]
+----
+...
+first_string  = "1337"
+second_string = "kittens"
+third_string  = " " #<3>
+fourth_string = "" #<4>
+
+first_string[3]  #=> "7" #<1>
+second_string[4] #=> "e"
+third_string[1]  #=> nil #<2>
+fourth_string[0] #=> nil #<3>
+...
+----
+<1> Observera att det är en `String`, inte en `Integer` som returneras.
+<2> Längden på strängen är 1. Alltså är sista (och första) index 0. Det finns inget (`nil`) på index 1.
+<3> Det finns _inget_ i en tom sträng. Inte ens på index 0.
+
+Man kan fråga en sträng hur många tecken den innehåller genom att anropa metoden `length` eller `size`, som returnerar strängens längd.
+
+.Metoderna length och size returnerar längden på strängen
+[source, ruby, numbered]
+----
+...
+first_string  = "1337"
+second_string  = " "
+third_string = ""
+...
+first_string.length #=> 4
+first_string.size #=> 4 #<1>
+second_string.length #=> 1
+third_string.length #=> 0
+...
+----
+<1> `length` och `size` gör samma sak
+
+.Två exempel på hur indexeringsverktyget kan användas
+image::images/verktyg/indexing_string.png[]
+
+=== Konkatenering
+
+Att slå ihop, eller kombinera, två strängar kallas för _konkatenering_.
+
+Konkatenering kan t.ex användas för att skapa nya strängar, kombinera två strängar till en sträng, eller för att lägga till ett teecken i slutet av en sträng.
+
+.Konkatenering i flödesschema
+image::images/verktyg/string_concatenation.png[]
+
+.Konkatenering i ruby-kod
+[source, ruby, highlight=4-5]
+----
+...
+first_word = "banana"
+second_word = "pie"
+new_word = first_word + " " #<1>
+new_word = new_word + second_word + "!" #<2>
+----
+<1> Om man vill ha ett mellanrum mellan två konkatenerade strängar måste man lägga in det manuellt.
+<2> Först konkateneras `new_word` med `second_word`. Resultatet av konkateneringen (`"banana pie"`) konkateneras sen med `"!"`.
 
 == Uppdelning av programflödet
 
@@ -101,9 +219,9 @@ Om villkoret **inte** utvärderas till sant kommer programflödet fortsätta eft
 
 .If-verktyget i ett flödesschema
 image::images/verktyg/if.png[]
-
-.If-verktyget som ruby-kod
-[source, ruby, numbered, highlight=2-4]
+√
+sdfdssas
+[source, ruby, numbered]
 ----
 ...
 if new_score > current_highscore
