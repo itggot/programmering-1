@@ -4,6 +4,7 @@
 
 === Smallest of two
 
+<<<<<<< HEAD
 Funktionen ska ta två integers som *input* och ge det minsta av dem som *output*.
 
 ==== Exempeltabell
@@ -151,3 +152,10 @@ ticket_price(70) #-> 15
 [source, ruby, numbered, highlight=4]
 ----
 ----
+=======
+=== Largest of three
+
+=== Smallest of four
+
+=== Ticket Price
+>>>>>>> refs/remotes/origin/master
