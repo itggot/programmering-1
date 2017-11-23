@@ -42,7 +42,7 @@ a_large_number = 13 + 37 #<3>
 <2> `a_small_number` tilldelas 0, som är ett heltal.
 <3> `a_large_number` tilldelas resultatet av operationen (i det här fallet 50, även det ett heltal)
 
-==== Inkrementering
+=== Inkrementering
 
 Att öka värdet på en variabel av datatypen `Integer` kallas _inkrementering_, eller att _inkrementera_.
 
