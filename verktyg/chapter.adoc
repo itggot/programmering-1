@@ -21,7 +21,7 @@ Alla värden som lagras i en variabel är av en viss _datatyp_.
 
 Datorn måste veta vilken typ av data som är lagrad i en variabel, så den vet vad den kan göra med variabeln.
 
-Till exempel kan man addera dividera två tal med varandra, men det går inte att dividera ett ord.
+Till exempel kan man addera eller dividera två tal med varandra, men det går inte att dividera ett ord.
 
 == Heltal (Integer)
 
