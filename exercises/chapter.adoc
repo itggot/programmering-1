@@ -151,8 +151,3 @@ ticket_price(70) #-> 15
 [source, ruby, numbered, highlight=4]
 ----
 ----
-=== Largest of three
-
-=== Smallest of four
-
-=== Ticket Price
