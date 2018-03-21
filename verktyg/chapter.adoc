@@ -441,8 +441,17 @@ end
 <3> Någonstans i loopen måste `player_health` kunna ändras - annars blir det en oändlig loop.
 <4> Här fortsätter programflödet när/om loop-villkoret är falskt.
 
-== Funktionsanrop
+== Sammansatta verktyg
 
+=== Iterativt Uppbyggd Output
+
+När man vill omvandla en sträng eller en array till en annan sträng eller array är det oftast enklast att bygga upp en *ny* sträng eller array snarare än att modifiera den ursprungliga. 
+Det gör du enklast genom att använda verktyget "Iterativt Uppbyggd Ouptut"
+
+.Iterativt Uppbyggd Output
+image::images/verktyg/iteratively_constructed_output.png[]
+
+== Funktionsanrop
 
 Ibland vill man i en del av en ny funktion använda samma funktionalitet som finns i en annan funktion.
 

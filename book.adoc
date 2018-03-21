@@ -6,8 +6,6 @@
 :includedir: includes
 :sourcedir: ../source
 
-
-
 = Programmering 1
 
 include::verktyg/chapter.adoc[leveloffset=+1]
