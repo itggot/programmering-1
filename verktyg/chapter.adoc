@@ -1,5 +1,7 @@
 = Verktyg
 
+
+
 == Variabler
 
 === Tilldelning
@@ -440,6 +442,210 @@ end
 <2> Koden som ska upprepas. 
 <3> Någonstans i loopen måste `player_health` kunna ändras - annars blir det en oändlig loop.
 <4> Här fortsätter programflödet när/om loop-villkoret är falskt.
+
+== Funktioner
+
+=== Funktionsmaskinen
+Överallt inom programmering finns funktioner. Dessa är som maskiner där man stoppar in saker
+och får ut ett resultat.
+Det man kan stoppa in i och få ut från maskiner är data av olika datatyper,
+maskinen behandlar sedan datan på något vis och ger ett resultat med någon data och datatyp. +
+Programmerare skapar dessa maskiner och använder dem för att lösa problem.
+Alla program som du använder består av många funktioner som arbetar tillsammans.
+Det är även ett smidigt sätt att gruppera sin kod och undvika s.k. spagettikod.
+
+
+==== Exempel
+* Double
+.En maskin som dubblar talet man stoppar in
+image::images/verktyg/funktions_maskin_oneinput.png[] 
+
+* Starts with
+.En maskin som avgör man det första tecknet på det första du stoppar in är samma som det andra du stoppar in.
+image::images/verktyg/funktions_maskin_otwoinput.png[] 
+
+=== Funktionsdefinition och Parametrar
+Varje funktion måste definieras med namn och input.
+Inputten läggs i variabler som kan användas inne i funktionen. Dessa variabler kallas för parametrar.
+Följande exempel visar en funktionsdefinition med en parameter.
+[cols="2*"]
+|===
+a|
+[source, ruby, numbered, highlight=2-5]
+----
+...
+def function_name(input1)<1><2><3>
+    #Inner workings of function<4>
+end<5>
+...
+----
+<1> Varje funktionsdefinition börjar med nyckelordet `def`.
+<2> `function_name` är namnet på funktionen och kan vara nästan vad som helst.
+<3> Efter namnet på funktionen följer parenteser och namnet på parametern.
+<4> Koden för funktionen skrivs här och ska indenteras.
+<5> `end` visar var koden till funktionen slutar.
+a|
+.Resultatet blir en maskin som den här
+image::images/verktyg/funktions_maskin_oneinput.png[] 
+|===
+
+=== Flera inputs
+Om en funktion har flera parametrar så avskiljer man varje parameter med ett kommatecken.
+
+==== Funktion med två inputs
+[cols="2*"]
+|===
+a|
+[source, ruby, numbered, highlight=2-5]
+----
+...
+def function_name(input1, input2)<1>
+    #Inner workings of function
+end
+...
+----
+<1> Varje parameter avskiljs med ett kommatecken
+a|
+.Resultatet blir en maskin som den här
+image::images/verktyg/funktions_maskin_twoinput.png[]
+
+|===
+==== Funktion med tre inputs
+[cols="2*"]
+|===
+a|
+[source, ruby, numbered, highlight=2-5]
+----
+...
+def function_name(input1, input2, input3)
+    #Inner workings of function
+end
+...
+----
+a|
+.Resultatet blir en maskin som den här
+image::images/verktyg/funktions_maskin_threeinput.png[]
+|===
+
+
+=== Funktioner utan input
+En funktion kan även definieras utan parametrar. Då lämnar man parentesen tom.
+
+[cols="2*"]
+|===
+a|
+[source, ruby, numbered, highlight=2-5]
+----
+...
+def function_name()
+    #Inner workings of function
+end
+...
+----
+a|
+.Resultatet blir en maskin som den här
+image::images/verktyg/funktions_maskin_noinput.png[]
+|===
+
+== Funktionsanrop och Input
+Att stoppa in data i en maskin och starta den är ett funktionsanrop.
+All data som man stoppar in i funktioner måste komma någonstans ifrån. 
+Den data man stoppar in i funktionen kallas för funktionens argument.
+När man väl har data att stoppa in i funktionen så kan man anropa den.
+Detta gör man på följande sätt.
+[source, ruby, numbered, highlight=2-5]
+----
+...
+function_name(argument)
+...
+----
+Datan måste dock komma någonstans ifrån, och det finns olika sätt att få data till sina funktioner.
+
+=== Hårdkodad data
+Det vanligaste som du kommer göra är att skapa din egna data direkt i programmet.
+Detta kan du göra antingen genom att spara datan i variabler och skicka med i funktionsanropet.
+[source, ruby, numbered, highlight=2-5]
+----
+...
+argument = "Some string value"
+function_name(argument)
+...
+----
+
+eller skriva värdet direkt i funktionsanropet
+[source, ruby, numbered, highlight=2-5]
+----
+...
+function_name("Some string value")
+...
+----
+=== Data från Tangentbordet
+Man kan även låta den som kör programmet mata in data från tangentbordet.
+All data som matas in från tangentbordet är strängar och har ett "\n"-tecken i slutet som representerar ny rad.
+Så om man vill att användaren ska mata in siffror
+måste man omvandla datatypen till det man är ute efter.
+[source, ruby, numbered, highlight=2-5]
+----
+...
+argument = gets()
+function_name(argument)
+...
+----
+[WARNING]
+====
+Man bör endast använda tangentbordet för inmatning av data om det är syftet med programmet.
+t.ex ett spel eller något som kräver att användaren gör något val.
+====
+=== Data från Filer
+Man kan även läsa in data från filer och på samma sätt som från tangentbordet är all data som läses in strängar.
+
+==== Läs in hela innehållet i en fil som en sträng
+[source, ruby, numbered, highlight=2-5]
+----
+...
+file_content = File.read("path/to/file")<1><2>
+...
+----
+<1> "path/to/file" är en relativ sökväg till filen
+<2> Om filen innehåller radbrytningar kommer dessa vara ett "\n"-tecken i strängen.
+==== Läs in varje rad i en fil som en array av strängar
+[source, ruby, numbered, highlight=2-5]
+----
+...
+file_content = File.readlines("path/to/file")
+...
+----
+=== Output
+En funktion kan endast ge en output och man ska göra något med den behöver man göra något av följande när man anroper den.
+
+==== Spara resultatet i en variabel
+[source, ruby, numbered, highlight=2-5]
+----
+...
+result = function_name(argument)
+...
+----
+==== Anropa funktionen direkt där du behöver den
+I ett villkor
+[source, ruby, numbered, highlight=2-5]
+----
+...
+if function_name(argument) == "I am a tea cup"
+    #Do stuff
+end
+...
+----
+Eller skriva ut resultatet i terminalen
+[source, ruby, numbered, highlight=2-5]
+----
+...
+puts function_name(argument)
+...
+----
+
+=== Ett komplett exempel
+* double
+* starts_with
 
 == Sammansatta verktyg
 
