@@ -547,7 +547,7 @@ a|
 image::images/verktyg/funktions_maskin_noinput.png[]
 |===
 
-== Funktionsanrop och Input
+=== Funktionsanrop och inputdata
 Att stoppa in data i en maskin och starta den är ett funktionsanrop.
 All data som man stoppar in i funktioner måste komma någonstans ifrån. 
 Den data man stoppar in i funktionen kallas för funktionens argument.
@@ -561,7 +561,7 @@ function_name(argument)
 ----
 Datan måste dock komma någonstans ifrån, och det finns olika sätt att få data till sina funktioner.
 
-=== Hårdkodad data
+==== Hårdkodad data
 Det vanligaste som du kommer göra är att skapa din egna data direkt i programmet.
 Detta kan du göra antingen genom att spara datan i variabler och skicka med i funktionsanropet.
 [source, ruby, numbered, highlight=2-5]
@@ -579,7 +579,7 @@ eller skriva värdet direkt i funktionsanropet
 function_name("Some string value")
 ...
 ----
-=== Data från Tangentbordet
+==== Data från Tangentbordet
 Man kan även låta den som kör programmet mata in data från tangentbordet.
 All data som matas in från tangentbordet är strängar och har ett "\n"-tecken i slutet som representerar ny rad.
 Så om man vill att användaren ska mata in siffror
@@ -596,7 +596,7 @@ function_name(argument)
 Man bör endast använda tangentbordet för inmatning av data om det är syftet med programmet.
 t.ex ett spel eller något som kräver att användaren gör något val.
 ====
-=== Data från Filer
+==== Data från Filer
 Man kan även läsa in data från filer och på samma sätt som från tangentbordet är all data som läses in strängar.
 
 ==== Läs in hela innehållet i en fil som en sträng
@@ -642,6 +642,18 @@ Eller skriva ut resultatet i terminalen
 puts function_name(argument)
 ...
 ----
+
+=== Output - Return
+När du vill ge output från en funktion så använder man `return` följt av den data du vill ska komma ut.
+[source, ruby, numbered, highlight=2-5]
+----
+...
+return output
+...
+----
+
+`return` avbryter resten av funktionen och programmet fortsätter där du anropade funktionen.
+
 
 === Ett komplett exempel
 * double
