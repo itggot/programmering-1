@@ -655,8 +655,9 @@ return output
 `return` avbryter resten av funktionen och programmet fortsätter där du anropade funktionen.
 
 
-=== Ett komplett exempel
+=== Komplett exempel
 * double
+
 [source, ruby, numbered, highlight=2-5]
 ----
 ...
@@ -666,6 +667,7 @@ end
 ...
 ----
 * starts_with
+
 [source, ruby, numbered, highlight=2-5]
 ----
 ...
