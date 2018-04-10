@@ -657,7 +657,24 @@ return output
 
 === Ett komplett exempel
 * double
+[source, ruby, numbered, highlight=2-5]
+----
+...
+def double(num)
+    return num * 2
+end
+...
+----
 * starts_with
+[source, ruby, numbered, highlight=2-5]
+----
+...
+def starts_with(string, character)
+    first_character = string[0]
+    return first_character == character
+end
+...
+----
 
 == Sammansatta verktyg
 
