@@ -11,3 +11,5 @@
 include::verktyg/chapter.adoc[leveloffset=+1]
 
 include::exercises/chapter.adoc[leveloffset=+1]
+
+include::library/chapter.adoc[leveloffset=+1]
