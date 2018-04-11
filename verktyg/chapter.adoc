@@ -457,12 +457,14 @@ Det är även ett smidigt sätt att gruppera sin kod och undvika s.k. spagettiko
 
 ==== Exempel
 * Double
+
 .En maskin som dubblar talet man stoppar in
 image::images/verktyg/funktions_maskin_oneinput.png[] 
 
 * Starts with
+
 .En maskin som avgör man det första tecknet på det första du stoppar in är samma som det andra du stoppar in.
-image::images/verktyg/funktions_maskin_otwoinput.png[] 
+image::images/verktyg/funktions_maskin_twoinput.png[] 
 
 === Funktionsdefinition och Parametrar
 Varje funktion måste definieras med namn och input.
