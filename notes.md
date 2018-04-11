@@ -79,21 +79,26 @@
 ### Idé för ordning
 
 #### Funktioner och operatorer
-* next, previous
-* add/subtract/multiply/divide
-* square/cube
+* next
+* previous
+* square
+* cube
 
 #### Villkor
 * is_negative
-* is_even / is_odd
+* is_even
+* is_odd
 * absolute (med is_negative)
-* between / between_strict
-* min/max of two/three/four
-* ticket_price
+* between 
+* between_strict
+* min_of_ two/three/four
+* max_of_ two/three/four
+(*) ticket_price
 
 #### Loopar
 * sum_to
-* multiply / power
+* factorial 
+* power (iterativt)
 
 #### Arrays
 * first_of
@@ -105,9 +110,12 @@
 * average
 
 #### Strings
-* starts_with / ends_with / is_empty
+* is_empty
+* starts_with 
+* ends_with 
 * chomp
-* contains (char) / index (char)
+* contains (char) 
+* index (char)
 * count (char)
 * remove (char)
 * left_strip / right_strip / strip
@@ -130,3 +138,6 @@
 * remove (substring)
 * replace (substring)
 * split (substring)
+
+
+## Uppgiftsmall
