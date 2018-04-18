@@ -3,10 +3,8 @@
 
 === Next Number
 
-
 ==== Beskrivning
 Tar ett heltal som input och ger nästa tal som output.
-
 
 ==== Testdata
 [width=75%]
@@ -30,10 +28,8 @@ next_number(-3) #=> -2
 ----
 === Previous Number
 
-
 ==== Beskrivning
 Tar ett heltal som input och ger föregående tal som output.
-
 
 ==== Testdata
 [width=75%]
@@ -57,10 +53,8 @@ previous_number(-3) #=> -4
 ----
 === Square
 
-
 ==== Beskrivning
 Tar ett heltal som input och ger kvadraten på talet som output. Kvadraten på ett tal innebär talet multiplicerat med sig själv.
-
 
 ==== Testdata
 [width=75%]
@@ -84,10 +78,8 @@ square(-3) #=> 9
 ----
 === Cube
 
-
 ==== Beskrivning
 Tar ett heltal som input och ger kubiken på talet som output. Kubiken på ett tal innebär talet multiplicerat med sig själv tre gånger.
-
 
 ==== Testdata
 [width=75%]
@@ -113,10 +105,8 @@ cube(-3) #=> -27
 
 === Is Negative
 
-
 ==== Beskrivning
 Tar ett heltal som input och avgör om talet är negativt.
-
 
 ==== Testdata
 [width=75%]
@@ -140,10 +130,8 @@ is_negative(-3) #=> true
 ----
 === Is Even
 
-
 ==== Beskrivning
 Tar ett heltal som input och avgör om talet är jämnt.
-
 
 ==== Testdata
 [width=75%]
@@ -167,10 +155,8 @@ is_even(-10) #=> true
 ----
 === Is Odd
 
-
 ==== Beskrivning
 Tar ett heltal som input och avgör om talet är udda.
-
 
 ==== Testdata
 [width=75%]
@@ -194,10 +180,8 @@ is_odd(-10) #=> false
 ----
 === Absolute
 
-
 ==== Beskrivning
 Tar ett heltal som input och ger absolutvärdet på talet som output. Absolutvärdet innebär det positiva motsvarigheten av talet.
-
 
 ==== Testdata
 [width=75%]
@@ -223,10 +207,8 @@ absolute(-10) #=> 10
 ----
 === Between
 
-
 ==== Beskrivning
 Tar tre tal som input och avgör om det första ligger mellan den andra och tredje.
-
 
 ==== Testdata
 [width=75%]
@@ -248,10 +230,8 @@ between(0, -1, 1) #=> true
 ----
 === Between Strict
 
-
 ==== Beskrivning
 Tar tre tal som input och avgör om det första ligger strikt mellan den andra och tredje.
-
 
 ==== Testdata
 [width=75%]
@@ -273,10 +253,8 @@ between_strict(0, -1, 1) #=> true
 ----
 === Min of Two
 
-
 ==== Beskrivning
 Tar två tal som input och ger det minsta av dem som output.
-
 
 ==== Testdata
 [width=75%]
@@ -298,10 +276,8 @@ min_of_two(0, 1) #=> 0
 ----
 === Min of Three
 
-
 ==== Beskrivning
 Tar tre tal som input och ger det minsta av dem som output
-
 
 ==== Testdata
 [width=75%]
@@ -323,10 +299,8 @@ min_of_three(1337, -1337, 0) #=> -1337
 ----
 === Min of Four
 
-
 ==== Beskrivning
 Tar tre fyra som input och ger det minsta av dem som output
-
 
 ==== Testdata
 [width=75%]
@@ -348,10 +322,8 @@ min_of_four(1337, -1337, 0, -1338) #=> -1338
 ----
 === Max of Two
 
-
 ==== Beskrivning
 Tar två tal som input och ger det största av dem som output.
-
 
 ==== Testdata
 [width=75%]
@@ -373,10 +345,8 @@ max_of_two(0, 1) #=> 1
 ----
 === Max of Three
 
-
 ==== Beskrivning
 Tar tre tal som input och ger det största av dem som output
-
 
 ==== Testdata
 [width=75%]
@@ -398,10 +368,8 @@ max_of_three(1337, -1337, 0) #=> 1337
 ----
 === Max of Four
 
-
 ==== Beskrivning
 Tar tre fyra som input och ger det största av dem som output
-
 
 ==== Testdata
 [width=75%]
@@ -425,10 +393,8 @@ max_of_four(1337, -1337, 0, -1338) #=> -1338
 
 === Sum To
 
-
 ==== Beskrivning
 Tar ett tal som input och ger summan av alla tal från 0 till talet som output.
-
 
 ==== Testdata
 [width=75%]
@@ -436,26 +402,24 @@ Tar ett tal som input och ger summan av alla tal från 0 till talet som output.
 
 | **Input** | **Output** 
 
-| 3 | 9
-| 5 | 25
-| 10 | 100
+| 3 | 6
+| 5 | 15
+| 10 | 55
 
 |===
 
 ==== Testkörning
 [source, ruby, numbered]
 ----
-sum_to(3) #=> 9 
-sum_to(5) #=> 25 
-sum_to(10) #=> 100 
+sum_to(3) #=> 6 
+sum_to(5) #=> 15 
+sum_to(10) #=> 55 
 
 ----
 === Factorial
 
-
 ==== Beskrivning
 Tar ett tal som input och ger produkten av alla tal från 1 till talet som output.
-
 
 ==== Testdata
 [width=75%]
@@ -463,26 +427,24 @@ Tar ett tal som input och ger produkten av alla tal från 1 till talet som outpu
 
 | **Input** | **Output** 
 
-| 3 | 27
-| 5 | 3125
-| 10 | 10000000000
+| 3 | 6
+| 5 | 120
+| 10 | 3628800
 
 |===
 
 ==== Testkörning
 [source, ruby, numbered]
 ----
-factorial(3) #=> 27 
-factorial(5) #=> 3125 
-factorial(10) #=> 10000000000 
+factorial(3) #=> 6 
+factorial(5) #=> 120 
+factorial(10) #=> 3628800 
 
 ----
 === Power
 
-
 ==== Beskrivning
 Tar två tal som input och ger potensen som output, med första input som bas och andra som exponent.
-
 
 ==== Testdata
 [width=75%]
@@ -506,10 +468,8 @@ power(10, 6) #=> 1000000
 
 === First Of
 
-
 ==== Beskrivning
 Tar en Array som input och ger det första elementet i arrayen som output.
-
 
 ==== Testdata
 [width=75%]
@@ -533,10 +493,8 @@ first_of([0, 0, 0]) #=> 0
 ----
 === Last Of
 
-
 ==== Beskrivning
 Tar en Array som input och ger det sista elementet i arrayen som output.
-
 
 ==== Testdata
 [width=75%]
@@ -560,10 +518,8 @@ last_of([0, 0, 0]) #=> 0
 ----
 === Append
 
-
 ==== Beskrivning
 Tar en array och ett heltal som input och ger en ny array som output, där hetalet läggs till i slutet på arrayen.
-
 
 ==== Testdata
 [width=75%]
@@ -581,10 +537,8 @@ append([1, 2, 3], 4) #=> [1, 2, 3, 4]
 ----
 === Concat
 
-
 ==== Beskrivning
 Tar två arrayer som input och ger en ny array som output, där båda arrayerna sätts ihop.
-
 
 ==== Testdata
 [width=75%]
@@ -604,10 +558,8 @@ concat([10, 10, 10], [11, 11, 11]) #=> [10, 10, 10, 11, 11, 11]
 ----
 === Prepend
 
-
 ==== Beskrivning
 Tar En array och ett heltal som input och ger en ny array som output, där heltalet läggs i början på arrayen.
-
 
 ==== Testdata
 [width=75%]
@@ -627,10 +579,8 @@ prepend([10, 10, 10], 11) #=> [11, 10, 10, 10]
 ----
 === Sum
 
-
 ==== Beskrivning
 Tar en array av integers som input och ger summan av alla tal som output
-
 
 ==== Testdata
 [width=75%]
@@ -652,10 +602,8 @@ sum([1337, 1337, 1337]) #=> 4011
 ----
 === Average
 
-
 ==== Beskrivning
 Tar en array av integers som input och ger medelvärdet av talen som output
-
 
 ==== Testdata
 [width=75%]
@@ -677,10 +625,8 @@ average([1337, 1337, 1337]) #=> 1337.0
 ----
 === Is Empty
 
-
 ==== Beskrivning
 Tar en sträng som input och avgör om strängen är tom
-
 
 ==== Testdata
 [width=75%]
@@ -704,10 +650,8 @@ is_empty("hej hopp") #=> false
 
 === Starts With
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och avgör om strängen börjar på det tecknet
-
 
 ==== Testdata
 [width=75%]
@@ -729,10 +673,8 @@ starts_with("!!zomg!!", "!") #=> true
 ----
 === Ends With
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och avgör om strängen slutar på det tecknet
-
 
 ==== Testdata
 [width=75%]
@@ -754,10 +696,8 @@ ends_with("!!zomg!!", "!") #=> true
 ----
 === Chomp
 
-
 ==== Beskrivning
 Tar en sträng som input och ger en ny sträng som output, där den eventuellt tagit bort "\n"-tecknet från slutet.
-
 
 ==== Testdata
 [width=75%]
@@ -781,10 +721,8 @@ chomp("Foobar\n\n") #=> "Foobar\n"
 ----
 === Contains Char
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och avgör om tecknet finns i strängen.
-
 
 ==== Testdata
 [width=75%]
@@ -806,10 +744,8 @@ contains_char("Hello World", "H") #=> true
 ----
 === Index of Char
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och ger tecknets position i strängen som output om det finns, annars nil.
-
 
 ==== Testdata
 [width=75%]
@@ -831,10 +767,8 @@ index_of_char("Hello World", "!") #=> nil
 ----
 === Count
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet i strängen som output.
-
 
 ==== Testdata
 [width=75%]
@@ -856,10 +790,8 @@ count_char(".../o(. .  )", ".") #=> 12
 ----
 === Remove
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och ger en ny sträng som output, där tecknet är borttaget.
-
 
 ==== Testdata
 [width=75%]
@@ -879,10 +811,8 @@ remove_char("I am a teapot", "a ") #=> "Imtepot"
 ----
 === Left Strip
 
-
 ==== Beskrivning
 Tar en sträng som input och ger en ny sträng som output, där all whitespace på vänster sida är borttaget. (whitespace inkluderar mellanslag" ", tabbar \t och radbrytningar \n)
-
 
 ==== Testdata
 [width=75%]
@@ -906,10 +836,8 @@ left_strip("\nTesttest\n") #=> "Testtest\n"
 ----
 === Right Strip
 
-
 ==== Beskrivning
 Tar en sträng som input och ger en ny sträng som output, där all whitespace på höger sida är borttaget. (whitespace inkluderar mellanslag" ", tabbar \t och radbrytningar \n)
-
 
 ==== Testdata
 [width=75%]
@@ -933,10 +861,8 @@ right_strip("\nTesttest\n") #=> "\nTesttest"
 ----
 === Strip
 
-
 ==== Beskrivning
 Tar en sträng som input och ger en ny sträng som output, där all whitespace på båda sidor är borttaget. (whitespace inkluderar mellanslag" ", tabbar \t och radbrytningar \n)
-
 
 ==== Testdata
 [width=75%]
@@ -960,10 +886,8 @@ strip("\nTesttest\n") #=> "Testtest"
 ----
 === Replace Char
 
-
 ==== Beskrivning
 Tar tre strängar som input och en ny sträng som output där alla förekomster av sträng2 i sträng1 är ersatt med sträng3
-
 
 ==== Testdata
 [width=75%]
@@ -971,24 +895,22 @@ Tar tre strängar som input och en ny sträng som output där alla förekomster 
 
 | **Input** | **Output** 
 
-| "Hello World!"| "\"H\""| "\"F\"\r" | "Hello World!"
-| "Foobar"| "\"F\""| "\"B\"\r" | "Foobar"
+| "Hello World!"| "\"H\""| "\"F\"" | "Hello World!"
+| "Foobar"| "\"F\""| "\"B\"" | "Foobar"
 
 |===
 
 ==== Testkörning
 [source, ruby, numbered]
 ----
-replace_char("Hello World!", "\"H\"", "\"F\"\r") #=> "Hello World!" 
-replace_char("Foobar", "\"F\"", "\"B\"\r") #=> "Foobar" 
+replace_char("Hello World!", "\"H\"", "\"F\"") #=> "Hello World!" 
+replace_char("Foobar", "\"F\"", "\"B\"") #=> "Foobar" 
 
 ----
 === Slice
 
-
 ==== Beskrivning
 Tar en sträng och två integers som input och ger en ny sträng som output, där alla tecken i strängen mellan talen är urklippta.
-
 
 ==== Testdata
 [width=75%]
@@ -1008,10 +930,8 @@ slice("Foobar", 0, 1) #=> "F"
 ----
 === Split Char
 
-
 ==== Beskrivning
 Tar en sträng och ett tecken som input och ger en array som output, där elementen i arrayen är alla delar av strängen som är avskiljda med tecknet
-
 
 ==== Testdata
 [width=75%]
@@ -1035,10 +955,8 @@ split_char("This is a line\nthis is another line\nthis is a line too", "\n") #=>
 
 === Filter
 
-
 ==== Beskrivning
 Tar en array och ett värde som input och ger en ny array som output, där den nya arrayen endast innehåller värdet.
-
 
 ==== Testdata
 [width=75%]
@@ -1058,10 +976,8 @@ filter(["bosse", "olof", "kalle", "olof"], "olof") #=> ["olof", "olof"]
 ----
 === Exclude
 
-
 ==== Beskrivning
 Tar en array och ett värde som input och ger en ny array som output, där den nya arrayen **inte** innehåller värdet.
-
 
 ==== Testdata
 [width=75%]
@@ -1081,10 +997,8 @@ exclude(["bosse", "olof", "kalle", "olof"], "olof") #=> ["bosse", "kalle"]
 ----
 === Unique
 
-
 ==== Beskrivning
 Tar en array som input och en ny array som output, där den nya arrayen inte innehåller några dubletter.
-
 
 ==== Testdata
 [width=75%]
@@ -1106,10 +1020,8 @@ unique(["bosse", "olof", "kalle", "olof"]) #=> ["bosse", "olof", "kalle"]
 ----
 === Count
 
-
 ==== Beskrivning
 Tar en array och ett värde som input och ger antalet förekomster av värdet i arrayen som output
-
 
 ==== Testdata
 [width=75%]
@@ -1129,10 +1041,8 @@ count(["bosse", "olof", "kalle", "olof"], "olof") #=> 2
 ----
 === Contains
 
-
 ==== Beskrivning
 Tar en array och ett värde som input och av gör om arrayen innehåller värdet
-
 
 ==== Testdata
 [width=75%]
@@ -1154,10 +1064,8 @@ contains(["bosse", "olof", "kalle", "olof"], "gunilla") #=> false
 
 === Contains String
 
-
 ==== Beskrivning
 Tar två strängar som input och avgör om den första strängen innehåller den andra strängen.
-
 
 ==== Testdata
 [width=75%]
@@ -1177,10 +1085,8 @@ contains_string("foobar", "baz") #=> false
 ----
 === Index String
 
-
 ==== Beskrivning
 Tar två strängar som input och ger positionen av den andra strängen i den första strängen som output.
-
 
 ==== Testdata
 [width=75%]
@@ -1200,10 +1106,8 @@ index_string("foobar", "baz") #=> nil
 ----
 === Count String
 
-
 ==== Beskrivning
 Tar två strängar som input och ger antalet förekomster av den andra strängen i den första strängen som output.
-
 
 ==== Testdata
 [width=75%]
@@ -1223,10 +1127,8 @@ count_string("examples are hard\nexamples are hard\nexamples are hard", "example
 ----
 === Remove String
 
-
 ==== Beskrivning
 Tar två strängar som input och ger en sträng som output, där den nya strängen inte innehåller den andra strängen.
-
 
 ==== Testdata
 [width=75%]
@@ -1246,10 +1148,8 @@ remove_string("this is a test", " test") #=> "this is a"
 ----
 === Replace String
 
-
 ==== Beskrivning
 Tar tre strängar som input och ger en sträng som output, där den nya strängen har varje förekomst av sträng2 ersatt av sträng3.
-
 
 ==== Testdata
 [width=75%]
@@ -1269,10 +1169,8 @@ replace_string("examples are hard", "hard", "tough") #=> "examples are tough"
 ----
 === Split String
 
-
 ==== Beskrivning
 Tar två strängar som input och en array som output där arrayen innehåller delarna av strängen avgränsat med den andra strängen.
-
 
 ==== Testdata
 [width=75%]
@@ -1294,10 +1192,8 @@ split_string("This is a line\nthis is another line\nthis is also a line", "\n") 
 
 === Selection Sort
 
-
 ==== Beskrivning
 Tar en array som input och ger en ny array som output, där arrayen är sorterad i storleksordning. Funktionen följer algoritmen för https://en.wikipedia.org/wiki/Selection_sort[Selection Sort].
-
 
 ==== Testdata
 [width=75%]
@@ -1319,10 +1215,8 @@ selection_sort([0, -1, 2, -1, 9, -1]) #=> [-1, -1, -1, 0, 2, 9]
 ----
 === Insertion Sort
 
-
 ==== Beskrivning
 Tar en array som input och ger en ny array som output, där arrayen är sorterad i storleksordning. Funktionen följer algoritmen för https://en.wikipedia.org/wiki/Insertion_sort[Insertion Sort].
-
 
 ==== Testdata
 [width=75%]
@@ -1344,10 +1238,8 @@ insertion_sort([0, -1, 2, -1, 9, -1]) #=> [-1, -1, -1, 0, 2, 9]
 ----
 === Bubble Sort
 
-
 ==== Beskrivning
 Tar en array som input och ger en ny array som output, där arrayen är sorterad i storleksordning. Funktionen följer algoritmen för https://en.wikipedia.org/wiki/Bubble_sort[Bubble Sort].
-
 
 ==== Testdata
 [width=75%]
@@ -1369,10 +1261,8 @@ bubble_sort([0, -1, 2, -1, 9, -1]) #=> [-1, -1, -1, 0, 2, 9]
 ----
 === Quick Sort
 
-
 ==== Beskrivning
 Tar en array som input och ger en ny array som output, där arrayen är sorterad i storleksordning. Funktionen följer algoritmen för https://en.wikipedia.org/wiki/Quicksort[Quick Sort].
-
 
 ==== Testdata
 [width=75%]
