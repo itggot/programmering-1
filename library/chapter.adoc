@@ -375,18 +375,18 @@ Tar tre fyra som input och ger det största av dem som output
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Input 4**| **Output**  
-| 1| 2| 3| 4 | 1
-| 100| 2| 256| 1 | 1
-| 1337| -1337| 0| -1338 | -1338
+| 1| 2| 3| 4 | 4
+| 100| 2| 256| 1 | 256
+| 1337| -1337| 0| -1338 | 1337
 
 |===
 
 ==== Testkörning
 [source, ruby, numbered]
 ----
-max_of_four(1, 2, 3, 4) #=> 1 
-max_of_four(100, 2, 256, 1) #=> 1 
-max_of_four(1337, -1337, 0, -1338) #=> -1338 
+max_of_four(1, 2, 3, 4) #=> 4 
+max_of_four(100, 2, 256, 1) #=> 256 
+max_of_four(1337, -1337, 0, -1338) #=> 1337 
 
 ----
 == Loopar
