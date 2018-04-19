@@ -300,7 +300,7 @@ min_of_three(1337, -1337, 0) #=> -1337
 === Min of Four
 
 ==== Beskrivning
-Tar tre fyra som input och ger det minsta av dem som output
+Tar fyra tal som input och ger det minsta av dem som output
 
 ==== Testdata
 [width=75%]
