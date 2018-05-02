@@ -895,16 +895,16 @@ Tar tre strängar som input och en ny sträng som output där alla förekomster 
 
 | **Input** | **Output** 
 
-| "Hello World!"| "\"H\""| "\"F\"" | "Hello World!"
-| "Foobar"| "\"F\""| "\"B\"" | "Foobar"
+| "Hello World!"| "\"H\""| "\"F\"" | "Fello World!"
+| "Foobar"| "\"F\""| "\"B\"" | "Boobar"
 
 |===
 
 ==== Testkörning
 [source, ruby, numbered]
 ----
-replace_char("Hello World!", "\"H\"", "\"F\"") #=> "Hello World!" 
-replace_char("Foobar", "\"F\"", "\"B\"") #=> "Foobar" 
+replace_char("Hello World!", "\"H\"", "\"F\"") #=> "Fello World!" 
+replace_char("Foobar", "\"F\"", "\"B\"") #=> "Boobar" 
 
 ----
 === Slice
