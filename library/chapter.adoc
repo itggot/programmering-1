@@ -798,7 +798,7 @@ Tar en sträng och ett tecken som input och ger en ny sträng som output, där t
 |===
  | **Input 1**| **Input 2**| **Output**  
 | "omg omg omg"| "g" | "om om om"
-| "I am a teapot"| "a " | "Imtepot"
+| "I am a teapot"| "a" | "I m  tepot"
 
 |===
 
@@ -806,7 +806,7 @@ Tar en sträng och ett tecken som input och ger en ny sträng som output, där t
 [source, ruby, numbered]
 ----
 remove_char("omg omg omg", "g") #=> "om om om" 
-remove_char("I am a teapot", "a ") #=> "Imtepot" 
+remove_char("I am a teapot", "a") #=> "I m  tepot" 
 
 ----
 === Left Strip
