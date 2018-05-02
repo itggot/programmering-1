@@ -776,7 +776,7 @@ Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet 
  | **Input 1**| **Input 2**| **Output**  
 | "omg omg omg"| "g" | 3
 | "Bananpaj och grillkorv"| "a" | 3
-| ".../o(. .  )"| "." | 12
+| ".../o(. .  )"| "." | 5
 
 |===
 
@@ -785,7 +785,7 @@ Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet 
 ----
 count_char("omg omg omg", "g") #=> 3 
 count_char("Bananpaj och grillkorv", "a") #=> 3 
-count_char(".../o(. .  )", ".") #=> 12 
+count_char(".../o(. .  )", ".") #=> 5 
 
 ----
 === Remove
