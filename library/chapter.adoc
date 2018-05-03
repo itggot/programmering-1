@@ -916,7 +916,7 @@ Tar en sträng och två integers som input och ger en ny sträng som output, dä
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| "Hello World"| 2| 8 | "llo Worl"
+| "Hello World"| 2| 8 | "llo Wo"
 | "Foobar"| 0| 1 | "F"
 
 |===
@@ -924,7 +924,7 @@ Tar en sträng och två integers som input och ger en ny sträng som output, dä
 ==== Testkörning
 [source, ruby, numbered]
 ----
-slice("Hello World", 2, 8) #=> "llo Worl" 
+slice("Hello World", 2, 8) #=> "llo Wo" 
 slice("Foobar", 0, 1) #=> "F" 
 
 ----
