@@ -139,5 +139,11 @@
 * replace (substring)
 * split (substring)
 
+#### Sortering algorithms
+* SelectionSort
+* InsertionSort
+* BubbleSort
+* QuickSort
+
 
 ## Uppgiftsmall
