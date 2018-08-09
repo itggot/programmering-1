@@ -1,6 +1,6 @@
 = Biblioteket
-== Funktioner och operatorer
 
+== Funktioner och operatorer
 === Next Number
 
 ==== Beskrivning
@@ -12,9 +12,12 @@ Tar ett heltal som input och ger nästa tal som output.
 
 | **Input** | **Output** 
 
-| 5 | 6
-| 2 | 3
-| -3 | -2
+
+    | 5 | 6
+
+    | 2 | 3
+
+    | -3 | -2
 
 |===
 
@@ -37,9 +40,12 @@ Tar ett heltal som input och ger föregående tal som output.
 
 | **Input** | **Output** 
 
-| 5 | 4
-| 2 | 1
-| -3 | -4
+
+    | 5 | 4
+
+    | 2 | 1
+
+    | -3 | -4
 
 |===
 
@@ -62,9 +68,12 @@ Tar ett heltal som input och ger kvadraten på talet som output. Kvadraten på e
 
 | **Input** | **Output** 
 
-| 5 | 25
-| 2 | 4
-| -3 | 9
+
+    | 5 | 25
+
+    | 2 | 4
+
+    | -3 | 9
 
 |===
 
@@ -87,9 +96,12 @@ Tar ett heltal som input och ger kubiken på talet som output. Kubiken på ett t
 
 | **Input** | **Output** 
 
-| 5 | 125
-| 2 | 8
-| -3 | -27
+
+    | 5 | 125
+
+    | 2 | 8
+
+    | -3 | -27
 
 |===
 
@@ -101,8 +113,8 @@ cube(2) #=> 8
 cube(-3) #=> -27 
 
 ----
-== Villkor
 
+== Villkor
 === Is Negative
 
 ==== Beskrivning
@@ -114,9 +126,12 @@ Tar ett heltal som input och avgör om talet är negativt.
 
 | **Input** | **Output** 
 
-| 5 | false
-| 2 | false
-| -3 | true
+
+    | 5 | false
+
+    | 2 | false
+
+    | -3 | true
 
 |===
 
@@ -139,9 +154,12 @@ Tar ett heltal som input och avgör om talet är jämnt.
 
 | **Input** | **Output** 
 
-| 5 | false
-| 2 | true
-| -10 | true
+
+    | 5 | false
+
+    | 2 | true
+
+    | -10 | true
 
 |===
 
@@ -164,9 +182,12 @@ Tar ett heltal som input och avgör om talet är udda.
 
 | **Input** | **Output** 
 
-| 5 | true
-| 2 | false
-| -10 | false
+
+    | 5 | true
+
+    | 2 | false
+
+    | -10 | false
 
 |===
 
@@ -189,10 +210,14 @@ Tar ett heltal som input och ger absolutvärdet på talet som output. Absolutvä
 
 | **Input** | **Output** 
 
-| 5 | 5
-| 100 | 100
-| -200 | 200
-| -10 | 10
+
+    | 5 | 5
+
+    | 100 | 100
+
+    | -200 | 200
+
+    | -10 | 10
 
 |===
 
@@ -214,9 +239,12 @@ Tar tre tal som input och avgör om det första ligger mellan den andra och tred
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| 1| 1| 10 | true
-| 1| 5| 100 | false
-| 0| -1| 1 | true
+
+    | 1| 1| 10 | true
+
+    | 1| 5| 100 | false
+
+    | 0| -1| 1 | true
 
 |===
 
@@ -237,9 +265,12 @@ Tar tre tal som input och avgör om det första ligger strikt mellan den andra o
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| 1| 1| 10 | false
-| 1| 5| 100 | false
-| 0| -1| 1 | true
+
+    | 1| 1| 10 | false
+
+    | 1| 5| 100 | false
+
+    | 0| -1| 1 | true
 
 |===
 
@@ -260,9 +291,12 @@ Tar två tal som input och ger det minsta av dem som output.
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| 100| 20 | 20
-| -2| 10 | -2
-| 0| 1 | 0
+
+    | 100| 20 | 20
+
+    | -2| 10 | -2
+
+    | 0| 1 | 0
 
 |===
 
@@ -283,9 +317,12 @@ Tar tre tal som input och ger det minsta av dem som output
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| 1| 2| 3 | 1
-| 100| 2| 256 | 2
-| 1337| -1337| 0 | -1337
+
+    | 1| 2| 3 | 1
+
+    | 100| 2| 256 | 2
+
+    | 1337| -1337| 0 | -1337
 
 |===
 
@@ -300,15 +337,18 @@ min_of_three(1337, -1337, 0) #=> -1337
 === Min of Four
 
 ==== Beskrivning
-Tar fyra tal som input och ger det minsta av dem som output
+Tar fyra som input och ger det minsta av dem som output
 
 ==== Testdata
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Input 4**| **Output**  
-| 1| 2| 3| 4 | 1
-| 100| 2| 256| 1 | 1
-| 1337| -1337| 0| -1338 | -1338
+
+    | 1| 2| 3| 4 | 1
+
+    | 100| 2| 256| 1 | 1
+
+    | 1337| -1337| 0| -1338 | -1338
 
 |===
 
@@ -329,9 +369,12 @@ Tar två tal som input och ger det största av dem som output.
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| 100| 20 | 100
-| -2| 10 | 10
-| 0| 1 | 1
+
+    | 100| 20 | 100
+
+    | -2| 10 | 10
+
+    | 0| 1 | 1
 
 |===
 
@@ -352,9 +395,12 @@ Tar tre tal som input och ger det största av dem som output
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| 1| 2| 3 | 3
-| 100| 2| 256 | 256
-| 1337| -1337| 0 | 1337
+
+    | 1| 2| 3 | 3
+
+    | 100| 2| 256 | 256
+
+    | 1337| -1337| 0 | 1337
 
 |===
 
@@ -375,9 +421,12 @@ Tar tre fyra som input och ger det största av dem som output
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Input 4**| **Output**  
-| 1| 2| 3| 4 | 4
-| 100| 2| 256| 1 | 256
-| 1337| -1337| 0| -1338 | 1337
+
+    | 1| 2| 3| 4 | 4
+
+    | 100| 2| 256| 1 | 256
+
+    | 1337| -1337| 0| -1338 | 1337
 
 |===
 
@@ -389,8 +438,8 @@ max_of_four(100, 2, 256, 1) #=> 256
 max_of_four(1337, -1337, 0, -1338) #=> 1337 
 
 ----
-== Loopar
 
+== Loopar
 === Sum To
 
 ==== Beskrivning
@@ -402,9 +451,12 @@ Tar ett tal som input och ger summan av alla tal från 0 till talet som output.
 
 | **Input** | **Output** 
 
-| 3 | 6
-| 5 | 15
-| 10 | 55
+
+    | 3 | 6
+
+    | 5 | 15
+
+    | 10 | 55
 
 |===
 
@@ -427,9 +479,12 @@ Tar ett tal som input och ger produkten av alla tal från 1 till talet som outpu
 
 | **Input** | **Output** 
 
-| 3 | 6
-| 5 | 120
-| 10 | 3628800
+
+    | 3 | 6
+
+    | 5 | 120
+
+    | 10 | 3628800
 
 |===
 
@@ -450,9 +505,12 @@ Tar två tal som input och ger potensen som output, med första input som bas oc
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| 3| 2 | 9
-| 5| 3 | 125
-| 10| 6 | 1000000
+
+    | 3| 2 | 9
+
+    | 5| 3 | 125
+
+    | 10| 6 | 1000000
 
 |===
 
@@ -464,8 +522,8 @@ power(5, 3) #=> 125
 power(10, 6) #=> 1000000 
 
 ----
-== Arrayer
 
+== Arrayer
 === First Of
 
 ==== Beskrivning
@@ -477,9 +535,12 @@ Tar en Array som input och ger det första elementet i arrayen som output.
 
 | **Input** | **Output** 
 
-| [1, 2, 3] | 1
-| [1337, 2, -1] | 1337
-| [0, 0, 0] | 0
+
+    | [1, 2, 3] | 1
+
+    | [1337, 2, -1] | 1337
+
+    | [0, 0, 0] | 0
 
 |===
 
@@ -502,9 +563,12 @@ Tar en Array som input och ger det sista elementet i arrayen som output.
 
 | **Input** | **Output** 
 
-| [1, 2, 3] | 3
-| [1337, 2, -1] | -1
-| [0, 0, 0] | 0
+
+    | [1, 2, 3] | 3
+
+    | [1337, 2, -1] | -1
+
+    | [0, 0, 0] | 0
 
 |===
 
@@ -525,7 +589,8 @@ Tar en array och ett heltal som input och ger en ny array som output, där hetal
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [1, 2, 3]| 4 | [1, 2, 3, 4]
+
+    | [1, 2, 3]| 4 | [1, 2, 3, 4]
 
 |===
 
@@ -544,8 +609,10 @@ Tar två arrayer som input och ger en ny array som output, där båda arrayerna 
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [1, 2, 3]| [4, 5, 6] | [1, 2, 3, 4, 5, 6]
-| [10, 10, 10]| [11, 11, 11] | [10, 10, 10, 11, 11, 11]
+
+    | [1, 2, 3]| [4, 5, 6] | [1, 2, 3, 4, 5, 6]
+
+    | [10, 10, 10]| [11, 11, 11] | [10, 10, 10, 11, 11, 11]
 
 |===
 
@@ -565,8 +632,10 @@ Tar En array och ett heltal som input och ger en ny array som output, där helta
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [1, 2, 3]| 4 | [4, 1, 2, 3]
-| [10, 10, 10]| 11 | [11, 10, 10, 10]
+
+    | [1, 2, 3]| 4 | [4, 1, 2, 3]
+
+    | [10, 10, 10]| 11 | [11, 10, 10, 10]
 
 |===
 
@@ -588,8 +657,10 @@ Tar en array av integers som input och ger summan av alla tal som output
 
 | **Input** | **Output** 
 
-| [1, 2, 3, 4, 5] | 15
-| [1337, 1337, 1337] | 4011
+
+    | [1, 2, 3, 4, 5] | 15
+
+    | [1337, 1337, 1337] | 4011
 
 |===
 
@@ -611,8 +682,10 @@ Tar en array av integers som input och ger medelvärdet av talen som output
 
 | **Input** | **Output** 
 
-| [1, 2, 3, 4, 5] | 3.0
-| [1337, 1337, 1337] | 1337.0
+
+    | [1, 2, 3, 4, 5] | 3.0
+
+    | [1337, 1337, 1337] | 1337.0
 
 |===
 
@@ -634,8 +707,10 @@ Tar en sträng som input och avgör om strängen är tom
 
 | **Input** | **Output** 
 
-| "" | true
-| "hej hopp" | false
+
+    | "" | true
+
+    | "hej hopp" | false
 
 |===
 
@@ -646,8 +721,8 @@ is_empty("") #=> true
 is_empty("hej hopp") #=> false 
 
 ----
-== Strängar
 
+== Strängar
 === Starts With
 
 ==== Beskrivning
@@ -657,9 +732,12 @@ Tar en sträng och ett tecken som input och avgör om strängen börjar på det 
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "hej hopp"| "h" | true
-| "Hello World"| "k" | false
-| "!!zomg!!"| "!" | true
+
+    | "hej hopp"| "h" | true
+
+    | "Hello World"| "k" | false
+
+    | "!!zomg!!"| "!" | true
 
 |===
 
@@ -680,9 +758,12 @@ Tar en sträng och ett tecken som input och avgör om strängen slutar på det t
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "hej hopp"| "p" | true
-| "Hello World"| "W" | false
-| "!!zomg!!"| "!" | true
+
+    | "hej hopp"| "p" | true
+
+    | "Hello World"| "W" | false
+
+    | "!!zomg!!"| "!" | true
 
 |===
 
@@ -705,9 +786,12 @@ Tar en sträng som input och ger en ny sträng som output, där den eventuellt t
 
 | **Input** | **Output** 
 
-| "hej hopp\n" | "hej hopp"
-| "Hello World!" | "Hello World!"
-| "Foobar\n\n" | "Foobar\n"
+
+    | "hej hopp\n" | "hej hopp"
+
+    | "Hello World!" | "Hello World!"
+
+    | "Foobar\n\n" | "Foobar\n"
 
 |===
 
@@ -728,9 +812,12 @@ Tar en sträng och ett tecken som input och avgör om tecknet finns i strängen.
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "hej hopp"| "h" | true
-| "Hello World"| "%" | false
-| "Hello World"| "H" | true
+
+    | "hej hopp"| "h" | true
+
+    | "Hello World"| "%" | false
+
+    | "Hello World"| "H" | true
 
 |===
 
@@ -751,9 +838,12 @@ Tar en sträng och ett tecken som input och ger tecknets position i strängen so
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "hej hopp"| "h" | 0
-| "Hello World!"| "!" | 11
-| "Hello World"| "!" | nil
+
+    | "hej hopp"| "h" | 0
+
+    | "Hello World!"| "!" | 11
+
+    | "Hello World"| "!" | nil
 
 |===
 
@@ -774,9 +864,12 @@ Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet 
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "omg omg omg"| "g" | 3
-| "Bananpaj och grillkorv"| "a" | 3
-| ".../o(. .  )"| "." | 5
+
+    | "omg omg omg"| "g" | 3
+
+    | "Bananpaj och grillkorv"| "a" | 3
+
+    | ".../o(. .  )"| "." | 5
 
 |===
 
@@ -797,8 +890,10 @@ Tar en sträng och ett tecken som input och ger en ny sträng som output, där t
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "omg omg omg"| "g" | "om om om"
-| "I am a teapot"| "a" | "I m  tepot"
+
+    | "omg omg omg"| "g" | "om om om"
+
+    | "I am a teapot"| "a" | "I m  tepot"
 
 |===
 
@@ -820,9 +915,12 @@ Tar en sträng som input och ger en ny sträng som output, där all whitespace p
 
 | **Input** | **Output** 
 
-| "   Hello World!  " | "Hello World!  "
-| "\tFoobar" | "Foobar"
-| "\nTesttest\n" | "Testtest\n"
+
+    | "   Hello World!  " | "Hello World!  "
+
+    | "\tFoobar" | "Foobar"
+
+    | "\nTesttest\n" | "Testtest\n"
 
 |===
 
@@ -845,9 +943,12 @@ Tar en sträng som input och ger en ny sträng som output, där all whitespace p
 
 | **Input** | **Output** 
 
-| "   Hello World!  " | "   Hello World!"
-| "\tFoobar" | "\tFoobar"
-| "\nTesttest\n" | "\nTesttest"
+
+    | "   Hello World!  " | "   Hello World!"
+
+    | "\tFoobar" | "\tFoobar"
+
+    | "\nTesttest\n" | "\nTesttest"
 
 |===
 
@@ -870,9 +971,12 @@ Tar en sträng som input och ger en ny sträng som output, där all whitespace p
 
 | **Input** | **Output** 
 
-| "   Hello World!  " | "Hello World!"
-| "\tFoobar" | "Foobar"
-| "\nTesttest\n" | "Testtest"
+
+    | "   Hello World!  " | "Hello World!"
+
+    | "\tFoobar" | "Foobar"
+
+    | "\nTesttest\n" | "Testtest"
 
 |===
 
@@ -892,19 +996,19 @@ Tar tre strängar som input och en ny sträng som output där alla förekomster 
 ==== Testdata
 [width=75%]
 |===
+ | **Input 1**| **Input 2**| **Input 3**| **Output**  
 
-| **Input** | **Output** 
+    | "Hello World!"| "H"| "F" | "Fello World!"
 
-| "Hello World!"| "\"H\""| "\"F\"" | "Fello World!"
-| "Foobar"| "\"F\""| "\"B\"" | "Boobar"
+    | "Foobar"| "F"| "B" | "Boobar"
 
 |===
 
 ==== Testkörning
 [source, ruby, numbered]
 ----
-replace_char("Hello World!", "\"H\"", "\"F\"") #=> "Fello World!" 
-replace_char("Foobar", "\"F\"", "\"B\"") #=> "Boobar" 
+replace_char("Hello World!", "H", "F") #=> "Fello World!" 
+replace_char("Foobar", "F", "B") #=> "Boobar" 
 
 ----
 === Slice
@@ -916,8 +1020,10 @@ Tar en sträng och två integers som input och ger en ny sträng som output, dä
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| "Hello World"| 2| 8 | "llo Wo"
-| "Foobar"| 0| 1 | "F"
+
+    | "Hello World"| 2| 8 | "llo Wo"
+
+    | "Foobar"| 0| 1 | "F"
 
 |===
 
@@ -937,9 +1043,12 @@ Tar en sträng och ett tecken som input och ger en array som output, där elemen
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "1;2;3;4;5"| ";" | ["1", "2", "3", "4", "5"]
-| "Hello World"| " " | ["Hello", "World"]
-| "This is a line\nthis is another line\nthis is a line too"| "\n" | ["This is a line", "this is another line", "this is a line too"]
+
+    | "1;2;3;4;5"| ";" | ["1", "2", "3", "4", "5"]
+
+    | "Hello World"| " " | ["Hello", "World"]
+
+    | "This is a line\nthis is another line\nthis is a line too"| "\n" | ["This is a line", "this is another line", "this is a line too"]
 
 |===
 
@@ -951,8 +1060,8 @@ split_char("Hello World", " ") #=> ["Hello", "World"]
 split_char("This is a line\nthis is another line\nthis is a line too", "\n") #=> ["This is a line", "this is another line", "this is a line too"] 
 
 ----
-== Mer Arrayer
 
+== Mer Arrayer
 === Filter
 
 ==== Beskrivning
@@ -962,8 +1071,10 @@ Tar en array och ett värde som input och ger en ny array som output, där den n
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [8, 2, 0, 2, 5]| "2" | []
-| ["bosse", "olof", "kalle", "olof"]| "olof" | ["olof", "olof"]
+
+    | [8, 2, 0, 2, 5]| "2" | []
+
+    | ["bosse", "olof", "kalle", "olof"]| "olof" | ["olof", "olof"]
 
 |===
 
@@ -983,8 +1094,10 @@ Tar en array och ett värde som input och ger en ny array som output, där den n
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [8, 2, 0, 2, 5]| "2" | [8, 2, 0, 2, 5]
-| ["bosse", "olof", "kalle", "olof"]| "olof" | ["bosse", "kalle"]
+
+    | [8, 2, 0, 2, 5]| "2" | [8, 2, 0, 2, 5]
+
+    | ["bosse", "olof", "kalle", "olof"]| "olof" | ["bosse", "kalle"]
 
 |===
 
@@ -1006,8 +1119,10 @@ Tar en array som input och en ny array som output, där den nya arrayen inte inn
 
 | **Input** | **Output** 
 
-| [8, 2, 0, 2, 5] | [8, 2, 0, 5]
-| ["bosse", "olof", "kalle", "olof"] | ["bosse", "olof", "kalle"]
+
+    | [8, 2, 0, 2, 5] | [8, 2, 0, 5]
+
+    | ["bosse", "olof", "kalle", "olof"] | ["bosse", "olof", "kalle"]
 
 |===
 
@@ -1027,8 +1142,10 @@ Tar en array och ett värde som input och ger antalet förekomster av värdet i 
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [8, 2, 0, 2, 5, 0, 0, 0]| 0 | 4
-| ["bosse", "olof", "kalle", "olof"]| "olof" | 2
+
+    | [8, 2, 0, 2, 5, 0, 0, 0]| 0 | 4
+
+    | ["bosse", "olof", "kalle", "olof"]| "olof" | 2
 
 |===
 
@@ -1048,8 +1165,10 @@ Tar en array och ett värde som input och av gör om arrayen innehåller värdet
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| [8, 2, 0, 2, 5, 0, 0, 0]| 0 | true
-| ["bosse", "olof", "kalle", "olof"]| "gunilla" | false
+
+    | [8, 2, 0, 2, 5, 0, 0, 0]| 0 | true
+
+    | ["bosse", "olof", "kalle", "olof"]| "gunilla" | false
 
 |===
 
@@ -1060,8 +1179,8 @@ contains([8, 2, 0, 2, 5, 0, 0, 0], 0) #=> true
 contains(["bosse", "olof", "kalle", "olof"], "gunilla") #=> false 
 
 ----
-== Mer Strängar
 
+== Mer Strängar
 === Contains String
 
 ==== Beskrivning
@@ -1071,8 +1190,10 @@ Tar två strängar som input och avgör om den första strängen innehåller den
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "foobar"| "bar" | true
-| "foobar"| "baz" | false
+
+    | "foobar"| "bar" | true
+
+    | "foobar"| "baz" | false
 
 |===
 
@@ -1092,8 +1213,10 @@ Tar två strängar som input och ger positionen av den andra strängen i den fö
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "foobar"| "bar" | 3
-| "foobar"| "baz" | nil
+
+    | "foobar"| "bar" | 3
+
+    | "foobar"| "baz" | nil
 
 |===
 
@@ -1113,8 +1236,10 @@ Tar två strängar som input och ger antalet förekomster av den andra strängen
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "omg omg omg"| "omg" | 3
-| "examples are hard\nexamples are hard\nexamples are hard"| "examples" | 3
+
+    | "omg omg omg"| "omg" | 3
+
+    | "examples are hard\nexamples are hard\nexamples are hard"| "examples" | 3
 
 |===
 
@@ -1134,8 +1259,10 @@ Tar två strängar som input och ger en sträng som output, där den nya sträng
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "omg omg omg"| " " | "omgomgomg"
-| "this is a test"| " test" | "this is a"
+
+    | "omg omg omg"| " " | "omgomgomg"
+
+    | "this is a test"| " test" | "this is a"
 
 |===
 
@@ -1155,8 +1282,10 @@ Tar tre strängar som input och ger en sträng som output, där den nya stränge
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Input 3**| **Output**  
-| "omg omg omg"| "omg"| "foo" | "foo foo foo"
-| "examples are hard"| "hard"| "tough" | "examples are tough"
+
+    | "omg omg omg"| "omg"| "foo" | "foo foo foo"
+
+    | "examples are hard"| "hard"| "tough" | "examples are tough"
 
 |===
 
@@ -1176,8 +1305,10 @@ Tar två strängar som input och en array som output där arrayen innehåller de
 [width=75%]
 |===
  | **Input 1**| **Input 2**| **Output**  
-| "a bunch of text"| " " | ["a", "bunch", "of", "text"]
-| "This is a line\nthis is another line\nthis is also a line"| "\n" | ["This is a line", "this is another line", "this is also a line"]
+
+    | "a bunch of text"| " " | ["a", "bunch", "of", "text"]
+
+    | "This is a line\nthis is another line\nthis is also a line"| "\n" | ["This is a line", "this is another line", "this is also a line"]
 
 |===
 
@@ -1188,8 +1319,8 @@ split_string("a bunch of text", " ") #=> ["a", "bunch", "of", "text"]
 split_string("This is a line\nthis is another line\nthis is also a line", "\n") #=> ["This is a line", "this is another line", "this is also a line"] 
 
 ----
-== Sorteringsalgoritmer
 
+== Sorteringsalgoritmer
 === Selection Sort
 
 ==== Beskrivning
@@ -1201,8 +1332,10 @@ Tar en array som input och ger en ny array som output, där arrayen är sorterad
 
 | **Input** | **Output** 
 
-| [7, 3, 1, 3] | [1, 3, 3, 7]
-| [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
+
+    | [7, 3, 1, 3] | [1, 3, 3, 7]
+
+    | [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
 
 |===
 
@@ -1224,8 +1357,10 @@ Tar en array som input och ger en ny array som output, där arrayen är sorterad
 
 | **Input** | **Output** 
 
-| [7, 3, 1, 3] | [1, 3, 3, 7]
-| [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
+
+    | [7, 3, 1, 3] | [1, 3, 3, 7]
+
+    | [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
 
 |===
 
@@ -1247,8 +1382,10 @@ Tar en array som input och ger en ny array som output, där arrayen är sorterad
 
 | **Input** | **Output** 
 
-| [7, 3, 1, 3] | [1, 3, 3, 7]
-| [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
+
+    | [7, 3, 1, 3] | [1, 3, 3, 7]
+
+    | [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
 
 |===
 
@@ -1270,8 +1407,10 @@ Tar en array som input och ger en ny array som output, där arrayen är sorterad
 
 | **Input** | **Output** 
 
-| [7, 3, 1, 3] | [1, 3, 3, 7]
-| [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
+
+    | [7, 3, 1, 3] | [1, 3, 3, 7]
+
+    | [0, -1, 2, -1, 9, -1] | [-1, -1, -1, 0, 2, 9]
 
 |===
 
