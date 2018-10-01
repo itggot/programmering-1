@@ -18,6 +18,8 @@ Regler för state change
 
 Refler för conditions
 
+image::img/flowcharts/condition.png[villkor, 400,300]
+
 === Loops
 
 Regler för loopar

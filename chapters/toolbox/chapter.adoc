@@ -11,6 +11,25 @@
 == Verktyg för uppdelning av flödet (Villkor)
 
 === If
+Om du vill att ditt program ska göra en sak enbart om ett villkor är sant, kan du använda if. If-verktyget använder ett villkor, och om villkoret utvärderas till sant kommer något ske. Om villkoret inte utvärderas till sant kommer programflödet fortsätta efter villkoret, som om ingenting hänt.
+
+|===
+| `*Flödesschema*` | `*Kod*`
+a| 
+image::img/toolbox/if.png[if-verktyget]  
+a| 
+[source, ruby, numbered, highlight='2-4']
+----
+...
+if condition
+    # True-delen
+end # Sammanfogningen
+...
+----
+
+|===
+
+
 
 === If-Else
 
