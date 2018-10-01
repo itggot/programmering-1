@@ -1,0 +1,33 @@
+= Verktygslådan
+
+== Verktyg för ändring av State
+
+=== Tilldelning
+
+=== Inkrementering / Dekrementering
+
+=== Mellanlagring
+
+== Verktyg för uppdelning av flödet (Villkor)
+
+=== If
+
+=== If-Else
+
+=== If-Elseif-Else
+
+=== If-Else-And-Always
+
+== Verktyg för upprepning av flödet (Loopar)
+
+=== Räknande loop ( Inkrementerande / Dekrementerande )
+
+=== Okänt antal iterationer
+
+=== Input Loop
+
+== Verktyg för funktioner
+
+=== Outputvariabel
+
+=== Iterativt uppbyggd output

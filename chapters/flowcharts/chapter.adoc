@@ -1,0 +1,23 @@
+= Flödesscheman
+
+== Komponenter
+
+=== Input
+
+Regler för input
+
+=== Output
+
+Regler för output
+
+=== State Change
+
+Regler för state change
+
+=== Conditions
+
+Refler för conditions
+
+=== Loops
+
+Regler för loopar
